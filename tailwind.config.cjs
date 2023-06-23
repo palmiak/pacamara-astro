@@ -4,7 +4,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'tailblog': ['"Inter"', 'sans-serif'],
+				'tailblog-sans-serif': ['"Inter"', 'sans-serif'],
+				'tailblog-serif': ['"Spectral"', 'serif'],
 			},
 			colors: {
 				'tailblog-blue': '#0096FF',
