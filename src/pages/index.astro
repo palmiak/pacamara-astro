@@ -1,21 +1,12 @@
 ---
-import Base from "../layouts/Base.astro"
-import Welcome from "../components/Welcome.astro"
-import Post from "../components/Post.astro"
+import Base from "../layouts/Base.astro";
+import Welcome from "../components/Welcome.astro";
+import LatestPosts from "../components/LatestPosts.astro"
 ---
+
 <Base>
 	<main class="container mx-auto max-w-screen-xl px-7 py-10">
-        <Welcome />
-        <section class="container mx-auto max-w-screen-lg px-7 py-10">
-
-            <h3 class="text-tailblog-grey opacity-30 text-[14px] tracking-widest font-bold uppercase mb-10">My latest articles</h3>
-
-            <Post />
-
-			<Post />
-
-			<Post />
-        </section>
-    </main>
+		<Welcome />
+		<LatestPosts />
+	</main>
 </Base>
-

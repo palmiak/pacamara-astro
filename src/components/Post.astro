@@ -1,16 +1,14 @@
 ---
+const { postData } = Astro.props;
 ---
 <article
     class="prose max-w-none prose-headings:font-bold prose-headings:text-tailblog-grey-dark prose-p:text-tailblog-grey prose-a:text-tailblog-grey-dark prose-a:hover:text-tailblog-pink prose-a:no-underline prose-strong:font-normal prose-strong:text-tailblog-grey-dark"
 >
     <h2>
-        <a href="">Is it worth converting your WordPress to headless?</a>
+        <a href={ '/' + postData.slug }>{ postData.data.title }</a>
     </h2>
 
     <p>
-        <strong>NOVEMBER 18TH, 2023</strong> - Over time we can hear more and more
-        voices advocating for the WordPress headless approach. The question is -
-        is this really the best for WP to go, or maybe it's just another marketing
-        stunt? Spoiler alert - it's a bit of both.
+        <strong>{ postData.data.pubDate.toDateString() }</strong> - { postData.data.intro }
     </p>
 </article>

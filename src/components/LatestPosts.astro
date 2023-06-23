@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import Post from "./Post.astro";
+
+const { postLimit = 3 } = Astro.props;
+
+const posts = (await getCollection('blog', ({ data }) => {
+    return true;
+  })).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  ).slice(0, postLimit);
+---
+
+<section class="container mx-auto max-w-screen-lg px-7 py-10">
+    <h3
+        class="text-tailblog-grey opacity-30 text-[14px] tracking-widest font-bold uppercase mb-10"
+    >
+        My latest articles
+    </h3>
+
+    {
+        posts.map((post) => {
+            return <Post postData={post} />;
+        })
+    }
+</section>
