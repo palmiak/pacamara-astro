@@ -1,7 +1,7 @@
 ---
 title: Hello World
 pubDate: 2023-06-23
-intro: Lorem **ipsum** dolor sit amet, consectetur adipiscing elit. Nulla sit amet semper augue, nec eleifend purus. In hac habitasse platea dictumst.
+intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet semper augue, nec eleifend purus. In hac habitasse platea dictumst.
 tag: dev
 author: palmiak
 
