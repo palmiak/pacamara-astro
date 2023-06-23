@@ -1,15 +1,21 @@
 ---
+import Base from "../layouts/Base.astro"
+import Welcome from "../components/Welcome.astro"
+import Post from "../components/Post.astro"
 ---
+<Base>
+	<main class="container mx-auto max-w-screen-xl px-7 py-10">
+        <Welcome />
+        <section class="container mx-auto max-w-screen-lg px-7 py-10">
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+            <h3 class="text-tailblog-grey opacity-30 text-[14px] tracking-widest font-bold uppercase mb-10">My latest articles</h3>
+
+            <Post />
+
+			<Post />
+
+			<Post />
+        </section>
+    </main>
+</Base>
+
