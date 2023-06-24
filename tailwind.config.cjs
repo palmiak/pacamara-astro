@@ -4,19 +4,14 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'tailblog-sans-serif': ['"Inter"', 'sans-serif'],
-				'tailblog-serif': ['"Spectral"', 'serif'],
+				'tailblog-inter': ['"Inter"', 'sans-serif'],
+				'tailblog-space': ['"Space Grotesk"', 'sans-serif'],
 			},
 			colors: {
-				'tailblog-blue': '#0096FF',
-				'tailblog-purple': '#40128B',
-				'tailblog-pink': '#D800A6',
-				'tailblog-orange': '#ff7849',
-				'tailblog-green': '#BCEB3C',
-				'tailblog-yellow': '#FFE79B',
-				'tailblog-grey-dark': '#212A3E',
-				'tailblog-grey': '#394867',
-				'tailblog-grey-light': '#DDE6ED',
+				'tailblog-primary': '#27374D',
+				'tailblog-secondary': '#9DB2BF',
+				'tailblog-accent': '#526D82',
+				'tailblog-dark': '#1B2736',
 			},
 		},
 	},

@@ -11,13 +11,28 @@ const posts = (await getCollection('blog', ({ data }) => {
   ).slice(0, postLimit);
 ---
 
-<section class="container mx-auto max-w-screen-lg px-7 py-10">
-    <h3
-        class="text-tailblog-grey opacity-30 text-[14px] tracking-widest font-bold uppercase mb-10"
-    >
-        My latest articles
-    </h3>
+<!-- <section class="container mx-auto max-w-screen-2xl bg-[url('https://images.unsplash.com/photo-1524064047572-3d34d10e7142?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1555&q=80')] bg-center bg-no-repeat bg-cover min-h-screen md:h-[300px] lg:min-h-screen relative mb-10">
+</section> -->
 
+<section class="my-10 flex justify-center gap-5 overflow-hidden py-4 sm:gap-10">
+    <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-[10px] bg-white dark:bg-tailblog-dark sm:w-3/12 sm:rounded-[10px] rotate-2">
+        <img src="https://images.unsplash.com/photo-1686881537217-5bf3b5998cf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+    </div>
+    <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-[10px] bg-white dark:bg-tailblog-dark sm:w-3/12 sm:rounded-[10px] -rotate-2">
+        <img src="https://images.unsplash.com/photo-1687166851109-09a7b6ec7932?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+    </div>
+    <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-[10px] bg-white dark:bg-tailblog-dark sm:w-3/12 sm:rounded-[10px] rotate-2">
+        <img src="https://plus.unsplash.com/premium_photo-1684175656230-e839ec175c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+    </div>
+    <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-[10px] bg-white dark:bg-tailblog-dark sm:w-3/12 sm:rounded-[10px] rotate-2">
+        <img src="https://plus.unsplash.com/premium_photo-1686975618041-8f4971436c47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+    </div>
+    <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-[10px] bg-white dark:bg-tailblog-dark sm:w-3/12 sm:rounded-[10px] -rotate-2">
+        <img src="https://images.unsplash.com/photo-1610880846497-7257b23f6138?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+    </div>
+</section>
+
+<section class="container mx-auto max-w-screen-lg px-7 py-10">
     {
         posts.map((post) => {
             return <Post postData={post} />;

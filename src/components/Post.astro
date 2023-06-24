@@ -2,13 +2,18 @@
 const { postData } = Astro.props;
 ---
 <article
-    class="prose max-w-none prose-headings:font-bold prose-headings:text-tailblog-grey-dark prose-p:text-tailblog-grey prose-a:text-tailblog-grey-dark prose-a:hover:text-tailblog-pink prose-a:no-underline prose-strong:font-normal prose-strong:text-tailblog-grey-dark"
+    class="lg:mb-[100px] mb-10 prose lg:prose-xl max-w-none prose-headings:font-bold prose-headings:text-tailblog-accent prose-p:text-tailblog-primary/70 lg:prose-p:text-[18px] prose-a:text-tailblog-dark prose-a:hover:text-tailblog-pink prose-a:no-underline prose-strong:font-normal prose-headings:font-tailblog-space prose-h2:mb-3 prose-a:font-semibold"
 >
     <h2>
-        <a href={ '/' + postData.slug }>{ postData.data.title }</a>
+        <a href={ '/' + postData.slug } class="text-tailblog-dark hover:text-tailblog-accent transition-all duration-300">{ postData.data.title }</a>
     </h2>
 
     <p>
-        <strong>{ postData.data.pubDate.toDateString() }</strong> - { postData.data.intro }
+        { postData.data.intro }
+    </p>
+
+    <p class="flex flex-row flex-wrap gap-5 items-center">
+        <span class="uppercase tracking-widest relative text-xs inline-block before:content-['#'] before:absolute before:text-white/30 pl-4 inline-block before:top-0 before:left-0 before:text-tailblog-accent">marketing</span>
+        <small class="uppercase text-tailblog-accent text-xs">{ postData.data.pubDate.toDateString() }</small>
     </p>
 </article>

@@ -1,7 +1,7 @@
 ---
-title: Something New
+title: When using Statamic over WordPress is a good idea
 pubDate: 2023-06-20
-intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet semper augue, nec eleifend purus. In hac habitasse platea dictumst.
+intro: There are a lot of reasons why Google Fonts reigns supreme over other free font sources. For one, it’s Google, and you know they take things extremely seriously. With Google Fonts, a designer can be sure the technicalities such as licensing are taken care of, and they are also very easy to add to any website thanks to the Google Fonts API. They can also be mixed and matched to create truly striking Google Fonts
 tag: dev
 author: palmiak
 
