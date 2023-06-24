@@ -1,7 +1,7 @@
 ---
-title: One more post
+title: I was at the JS World and VueJS Amsterdam
 pubDate: 2023-06-21
-intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet semper augue, nec eleifend purus. In hac habitasse platea dictumst.
+intro: Here at Qode Interactive, we believe typography should be approached with equal focus and care as any other design element. It’s not just that the fonts “carry” the text, they also imbue the design with particular psychological values and convey specific
 tag: dev
 author: palmiak
 

@@ -1,7 +1,7 @@
 ---
-title: Hello World
+title: Buying a bicycle using Playwright
 pubDate: 2023-06-23
-intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet semper augue, nec eleifend purus. In hac habitasse platea dictumst.
+intro: While there are so many amazing indie type foundries out there creating all sorts of innovative and classic typefaces, designers often opt for free fonts that can be downloaded from the web
 tag: dev
 author: palmiak
 

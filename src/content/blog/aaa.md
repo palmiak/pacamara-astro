@@ -1,7 +1,7 @@
 ---
-title: AAAA
+title: Is it worth converting your WordPress to headless?
 pubDate: 2023-06-29
-intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet semper augue, nec eleifend purus. In hac habitasse platea dictumst.
+intro: Typography is a craft that, being charged with artistic, aesthetic and technical values, deserves more attention than the general public usually gives it. We are so used to seeing text everywhere we hardly ever stop to actually look at those letters, the way they are crafted and arranged within their environment
 tag: dev
 author: palmiak
 
