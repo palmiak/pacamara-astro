@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+
+import { getCollection, getEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const author = await getEntry(entry.data.author);
+---
+<Base>
+    <Content />
+
+    Author name { author.data.displayName }
+
+    <br/><br/>
+    Author photo <img src={author.data.photo} />
+</Base>
