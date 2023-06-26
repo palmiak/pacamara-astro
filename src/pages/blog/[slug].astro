@@ -1,11 +1,13 @@
 ---
 import Base from "../../layouts/Base.astro";
 import AuthorInfo from "../../components/AuthorInfo.astro";
+import LatestPosts from "../../components/LatestPosts.astro";
 
 import { getCollection, getEntry } from "astro:content";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
+
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -14,6 +16,8 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const author = await getEntry(entry.data.author);
+
+console.log( entry.slug )
 ---
 
 <Base>
@@ -28,5 +32,8 @@ const author = await getEntry(entry.data.author);
     </article>
 
     <AuthorInfo authorData={author} />
+
+    <h2>Read more</h2>
+    <LatestPosts postLimit=2 skipPost={entry.data.title} />
   </section>
 </Base>

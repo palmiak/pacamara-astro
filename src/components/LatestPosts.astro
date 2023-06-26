@@ -2,18 +2,16 @@
 import { getCollection } from "astro:content";
 import Post from "./Post.astro";
 
-const { postLimit = 3 } = Astro.props;
+const { postLimit = 3, skipPost = "" } = Astro.props;
 
 const posts = (await getCollection('blog', ({ data }) => {
-    return true;
+    console.log( data.title );
+    console.log( data.title == skipPost )
+    return !(data.title == skipPost);
   })).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   ).slice(0, postLimit);
 ---
-
-<!-- <section class="container mx-auto max-w-screen-2xl bg-[url('https://images.unsplash.com/photo-1524064047572-3d34d10e7142?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1555&q=80')] bg-center bg-no-repeat bg-cover min-h-screen md:h-[300px] lg:min-h-screen relative mb-10">
-</section> -->
-
 <section class="container mx-auto max-w-screen-lg px-7 py-10">
     {
         posts.map((post) => {
