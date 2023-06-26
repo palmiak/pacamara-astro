@@ -17,11 +17,13 @@ const author = await getEntry(entry.data.author);
 ---
 
 <Base>
-  <section class="container mx-auto max-w-screen-lg px-7 py-10">
+  <section class="">
+    <div class="container prose lg:prose-xl max-w-none mx-auto max-w-screen-xl prose-headings:font-bold prose-headings:text-tailblog-dark px-7 py-10">
+      <h1>{entry.data.title}</h1>      
+    </div>
     <article
-      class="lg:mb-[100px] mb-10 prose lg:prose-xl max-w-none prose-headings:font-bold prose-headings:text-tailblog-accent prose-p:text-tailblog-primary/70 lg:prose-p:text-[18px] prose-a:text-tailblog-dark prose-a:hover:text-tailblog-pink prose-a:no-underline prose-strong:font-normal prose-headings:font-tailblog-space prose-h2:mb-3 prose-a:font-semibold"
+      class="mx-auto max-w-screen-lg px-7 py-10 lg:mb-[100px] mb-10 prose lg:prose-xl max-w-none prose-headings:font-bold prose-headings:text-tailblog-accent prose-p:text-tailblog-primary/70 lg:prose-p:text-[18px] prose-a:text-tailblog-dark prose-a:hover:text-tailblog-pink prose-a:no-underline prose-strong:font-normal prose-headings:font-tailblog-space prose-h2:mb-3 prose-a:font-semibold"
     >
-      <h1>{entry.data.title}</h1>
       <Content />
     </article>
 
