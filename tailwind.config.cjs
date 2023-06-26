@@ -11,9 +11,9 @@ module.exports = {
 				'tailblog-space': ['"Space Grotesk"', 'sans-serif'],
 			},
 			colors: {
-				'tailblog-primary': '#4A4E69',
-				'tailblog-secondary': '#9A8C98',
-				'tailblog-accent': '#C9ADA7',
+				'tailblog-primary': '#001C30',
+				'tailblog-secondary': '#176B87',
+				'tailblog-accent': '#64CCC5',
 				'tailblog-dark': '#22223B',
 			},
 		},
