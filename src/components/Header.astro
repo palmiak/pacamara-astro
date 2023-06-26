@@ -1,4 +1,9 @@
-<header class="ontainer mx-auto max-w-screen-xl px-7 py-10 bg-white flex flex-initial flex-row gap-10 content-center items-center">
+---
+import ModeSwitch from "./ModeSwitch.astro";
+
+---
+
+<header class="ontainer mx-auto max-w-screen-xl px-7 py-10 bg-white flex flex-initial flex-row gap-10 content-center items-center dark:bg-black">
     <div class="logo flex-none">
         <a href="/" class="font-bold font-tailblog-space text-lg">Maciek Palmowski</a>
     </div>
@@ -17,4 +22,5 @@
             </ul>
         </nav>
     </div>
+    <ModeSwitch />
 </header>

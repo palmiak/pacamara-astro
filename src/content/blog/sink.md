@@ -17,8 +17,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non ipsum a augu
 ## H2
 ### H3
 #### H4
-##### H5
-###### H6
 
 Alternatively, for H1 and H2, an underline-ish style:
 
@@ -98,11 +96,6 @@ Here's our logo (hover to see the title text):
 Inline-style: 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
-Reference-style: 
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
 <a name="code"></a>
 
 ## Code and Syntax Highlighting
@@ -180,21 +173,6 @@ You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
 
 ## Horizontal Rule
 
-```
-Three or more...
-
----
-
-Hyphens
-
-***
-
-Asterisks
-
-___
-
-Underscores
-```
 
 Three or more...
 
