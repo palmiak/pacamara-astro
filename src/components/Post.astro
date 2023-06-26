@@ -12,8 +12,11 @@ const { postData } = Astro.props;
         { postData.data.intro }
     </p>
 
-    <p class="flex flex-row flex-wrap gap-5 items-center">
-        <span class="uppercase tracking-widest relative text-xs inline-block before:content-['#'] before:absolute before:text-white/30 pl-4 inline-block before:top-0 before:left-0 before:text-tailblog-accent">marketing</span>
-        <small class="uppercase text-tailblog-accent text-xs">{ postData.data.pubDate.toDateString() }</small>
+    <p class="flex flex-row flex-wrap gap-5 items-center font-tailblog-space">
+        <span class="group text-[16px] relative inline-block bg-tailblog-accent/60 rounded-tl-[10px] rounded-br-[10px] px-3 text-white">
+            marketing
+        </span>
+    
+        <small class=" text-tailblog-accent text-[16px]">{ postData.data.pubDate.toDateString() }</small>
     </p>
 </article>
