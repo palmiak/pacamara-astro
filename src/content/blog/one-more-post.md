@@ -2,7 +2,7 @@
 title: I was at the JS World and VueJS Amsterdam
 pubDate: 2023-06-21
 intro: Here at Qode Interactive, we believe typography should be approached with equal focus and care as any other design element. It’s not just that the fonts “carry” the text, they also imbue the design with particular psychological values and convey specific
-tag: dev
+tag: marketing
 author: palmiak
 
 ---
