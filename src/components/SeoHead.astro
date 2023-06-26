@@ -1,0 +1,28 @@
+---
+const { postData } = Astro.props;
+
+const title = postData?.data?.title ? postData.data.title : "Default Title";
+console.log(title);
+const description = postData?.data?.description ? postData.data.description : "Default Desc";
+const permalink = false;
+const image = postData?.data?.image ? postData.data.image : "https://onet.pl"
+const type = postData?.data?.type ? postData.data.type : "website"
+---
+
+<title>{title}</title>
+<meta name="title" content={title} />
+{description && <meta name="description" content={description} />}
+
+<!-- Open Graph Tags (Facebook) -->
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+{permalink && <meta property="og:url" content={permalink} />}
+{description && <meta property="og:description" content={description} />}
+{image && <meta property="og:image" content={image} />}
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content={title} />
+{permalink && <meta property="twitter:url" content={permalink} />}
+{description && <meta property="twitter:description" content={description} />}
+{image && <meta property="twitter:image" content={image} />}

@@ -5,9 +5,7 @@ import Post from "./Post.astro";
 const { postLimit = 3, skipPost = "" } = Astro.props;
 
 const posts = (await getCollection('blog', ({ data }) => {
-    console.log( data.title );
-    console.log( data.title == skipPost )
-    return !(data.title == skipPost);
+    return !(data.title == skipPost) ;
   })).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   ).slice(0, postLimit);
