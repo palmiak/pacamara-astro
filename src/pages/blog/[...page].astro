@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+
+import Base from "../../layouts/Base.astro";
+import Post from "../../components/Post.astro";
+
+export async function getStaticPaths({paginate}) {
+    const blogEntries = (await getCollection('blog', ({ data }) => {
+        return true;
+    })).sort(
+        (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    );
+
+    return paginate(blogEntries, { pageSize: 2 });
+}
+
+const { page } = Astro.props;
+---
+<Base>
+    <section class="container mx-auto max-w-screen-lg px-7 py-10">
+        {
+            page.data.map((post) => {
+                return <Post postData={post} />;
+            })
+        }
+
+        {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
+        {page.url.next ? <a href={page.url.next}>Next</a> : null}
+    </section>
+
+    
+</Base>

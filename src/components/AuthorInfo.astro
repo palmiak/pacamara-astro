@@ -1,0 +1,9 @@
+---
+const { authorData } = Astro.props;
+---
+
+<div>{authorData.data.displayName}</div>
+
+<p>{authorData.data.bio}</p>
+
+<img src={authorData.data.photo} />

@@ -1,0 +1,5 @@
+---
+import dateFormat, { masks } from "dateformat";
+const {date} = Astro.props;
+---
+<small class=" text-tailblog-accent text-[16px]">{ dateFormat(date, "dd-mm-yyyy") }</small>
