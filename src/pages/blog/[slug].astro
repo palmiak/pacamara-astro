@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import AuthorInfo from "../../components/AuthorInfo.astro";
 import LatestPosts from "../../components/LatestPosts.astro";
+import PublishDate from "../../components/PublishDate.astro";
 
 import { getCollection, getEntry } from "astro:content";
 
@@ -21,11 +22,44 @@ const author = await getEntry(entry.data.author);
 ---
 
 <Base postData={entry}>
-  <section class="container mx-auto max-w-screen-lg px-7 py-10">
+  <section class="">
+    <div class="container mx-auto max-w-screen-xl px-7 pt-10
+      prose max-w-none lg:prose-xl prose-headings:font-bold prose-headings:text-tailblog-dark prose-headings:mb-3 prose-img:m-0 prose-img:rounded-[10px]
+      ">
+      <h1 class="mx-auto max-w-screen-lg">{entry.data.title}</h1>
+      <p class="flex flex-row flex-wrap gap-5 items-center font-tailblog-space mx-auto max-w-screen-lg">
+          { entry.data.tag &&
+          <span class="group text-[16px] relative inline-block bg-tailblog-accent/60 rounded-tl-[10px] rounded-br-[10px] px-3 text-white">
+              {entry.data.tag}
+          </span>
+          }
+      
+          <PublishDate date={entry.data.pubDate} />
+      </p>
+      <picture class="relative -rotate-2 overflow-hidden">
+        <source srcset="https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=650&h=500&q=80"       
+          media="(max-width: 640px)">
+
+        <source srcset="https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1040&h=800&q=80"       
+          media="(min-width: 639px) and (max-width: 1023px)">
+
+        <source srcset="https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&h=700&q=80"       
+          media="(min-width: 1024px) and (max-width: 1279px)">
+
+        <img src="https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&h=700&q=80" alt="">
+      </picture>
+      
+    </div>
     <article
-      class="lg:mb-[100px] mb-10 prose lg:prose-xl max-w-none prose-headings:font-bold prose-headings:text-tailblog-accent prose-p:text-tailblog-primary/70 lg:prose-p:text-[18px] prose-a:text-tailblog-dark prose-a:hover:text-tailblog-pink prose-a:no-underline prose-strong:font-normal prose-headings:font-tailblog-space prose-h2:mb-3 prose-a:font-semibold"
+      class="mx-auto max-w-screen-lg px-7 lg:px-0 py-10 lg:mb-[100px] mb-10
+      prose lg:prose-xl max-w-none
+      prose-headings:font-tailblog-space prose-headings:font-bold prose-headings:text-tailblog-accent prose-headings:mb-0 prose-headings:pb-3 prose-headings:mt-6
+      prose-p:text-tailblog-primary/80 lg:prose-p:text-[18px] 
+      prose-li:text-tailblog-primary/80 lg:prose-li:text-[18px]
+      prose-td:text-tailblog-primary/80 lg:prose-td:text-[18px]
+      prose-a:underline prose-a:font-semibold prose-a:transition-all prose-a:duration-300 prose-a:text-tailblog-accent hover:prose-a:text-tailblog-dark
+      prose-strong:font-bold"
     >
-      <h1>{entry.data.title}</h1>
       <Content />
     </article>
 
