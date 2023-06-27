@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import config from '../../config.mjs';
+
 
 import Base from "../../layouts/Base.astro";
 import Post from "../../components/Post.astro";
@@ -11,7 +13,7 @@ export async function getStaticPaths({paginate}) {
         (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
     );
 
-    return paginate(blogEntries, { pageSize: 2 });
+    return paginate(blogEntries, { pageSize: config.postsPerPage });
 }
 
 const { page } = Astro.props;

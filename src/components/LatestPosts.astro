@@ -1,8 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 import Post from "./Post.astro";
+import config from "../config.mjs";
 
-const { postLimit = 3, skipPost = "" } = Astro.props;
+const { postLimit = config.latestPosts, skipPost = "" } = Astro.props;
 
 const posts = (await getCollection('blog', ({ data }) => {
     return !(data.title == skipPost) ;
