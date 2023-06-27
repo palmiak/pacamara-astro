@@ -1,4 +1,6 @@
 ---
+import Alpine from 'alpinejs';
+
 import SeoHead from "../components/SeoHead.astro"
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
@@ -6,11 +8,9 @@ import Footer from "../components/Footer.astro"
 const { postData } = Astro.props;
 ---
 <!doctype html>
-<html x-data="{
-    darkMode: localStorage.getItem('darkMode')
-    || localStorage.setItem('darkMode', 'system')}"
-x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))"
-x-bind:class="{'dark': darkMode === 'dark' || (darkMode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)}">
+<html 
+    x-data :class="($store.darkMode.on == 'true') ? 'dark' : ''"
+>
 
 <head>
     <meta charset="UTF-8">
@@ -29,5 +29,16 @@ x-bind:class="{'dark': darkMode === 'dark' || (darkMode === 'system' && window.m
 
     <Footer />
 </body>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('darkMode', {
+            on: ( ( localStorage.darkMode === "true" ) || ( localStorage.darkMode === undefined && window.matchMedia('(prefers-color-scheme: dark)').matches ) ) ? 'true' : '',
 
+            toggle() {
+                this.on = (this.on == "true") ? "false" : "true";
+                localStorage.darkMode = this.on;
+            }
+        })
+    })
+</script>
 </html>

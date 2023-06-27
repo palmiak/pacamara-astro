@@ -2,7 +2,6 @@
 const { postData } = Astro.props;
 
 const title = postData?.data?.title ? postData.data.title : "Default Title";
-console.log(title);
 const description = postData?.data?.description ? postData.data.description : "Default Desc";
 const permalink = false;
 const image = postData?.data?.image ? postData.data.image : "https://onet.pl"
