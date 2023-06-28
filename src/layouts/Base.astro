@@ -1,9 +1,9 @@
 ---
 import Alpine from 'alpinejs';
 
-import SeoHead from "../components/SeoHead.astro"
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
+import SeoHead from "../components/general/SeoHead.astro"
+import Header from "../components/general/Header.astro"
+import Footer from "../components/general/Footer.astro"
 
 const { postData } = Astro.props;
 ---
@@ -22,7 +22,7 @@ const { postData } = Astro.props;
     <SeoHead postData={postData} />
 </head>
 
-<body class="font-tailblog-inter">
+<body class="font-tailblog-inter transition-all duration-300 bg-white dark:bg-tailblog-dark">
     <Header />
 
     <slot />

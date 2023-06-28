@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Post from "./Post.astro";
-import config from "../config.mjs";
+import config from "../../config.mjs";
 
 const { postLimit = config.latestPosts, skipPost = "" } = Astro.props;
 
