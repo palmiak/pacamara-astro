@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets'
+
 import Base from "../../layouts/Base.astro";
 import AuthorInfo from "../../components/blog/AuthorInfo.astro";
 import LatestPosts from "../../components/blog/LatestPosts.astro";
@@ -19,6 +21,7 @@ entry.data.type = "blog";
 
 const { Content } = await entry.render();
 const author = await getEntry(entry.data.author);
+
 ---
 
 <Base postData={entry}>
@@ -36,7 +39,7 @@ const author = await getEntry(entry.data.author);
       
           <PublishDate date={entry.data.pubDate} />
       </p>
-      <picture class="overflow-hidden">
+      <picture class="relative -rotate-2 overflow-hidden">
         <source srcset="https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=650&h=500&q=80"       
           media="(max-width: 640px)">
 
@@ -46,8 +49,9 @@ const author = await getEntry(entry.data.author);
         <source srcset="https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&h=700&q=80"       
           media="(min-width: 1024px) and (max-width: 1279px)">
 
-        <img src="https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&h=700&q=80" alt="" class="relative -rotate-2">
+        <img src="https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&h=700&q=80" alt="">
       </picture>
+      
     </div>
     <article
       class="mx-auto max-w-screen-lg px-7 lg:px-0 py-10 lg:mb-[100px] mb-10

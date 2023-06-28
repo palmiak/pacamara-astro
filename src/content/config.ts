@@ -2,11 +2,11 @@ import { defineCollection, reference, z } from 'astro:content';
 
 const blogCollection = defineCollection({
     type: 'content', // v2.5.0 and later
-    schema: z.object({
+    schema: ({image}) => z.object({
         title: z.string(),
         intro: z.string(),
         tag: z.string(),
-        image: z.string().optional(),
+        image: image().optional(),
         author: reference('author'),
         pubDate: z.date()
     }),
@@ -14,10 +14,10 @@ const blogCollection = defineCollection({
 
 const authorCollection = defineCollection({
     type: 'data', // v2.5.0 and later
-    schema: z.object({
+    schema: ({image}) => z.object({
         displayName: z.string(),
         bio: z.string().optional(),
-        photo: z.string().optional()
+        photo: image().optional()
     }),
 });
 
