@@ -1,12 +1,21 @@
+---
+import { Image } from 'astro:assets'
+
+import logoImage from '../assets/logo.jpg';
+
+import slide1 from '../assets/slide-1.jpg';
+import slide2 from '../assets/slide-2.jpg';
+import slide3 from '../assets/slide-3.jpg';
+import slide4 from '../assets/slide-4.jpg';
+import slide5 from '../assets/slide-5.jpg';
+---
 <section class="
     container mx-auto max-w-screen-xl px-7 py-10
     lg:min-h-[500px] grid grid-cols-1 content-center font-tailblog
-    prose lg:prose-xl max-w-none lg:prose-xl prose-headings:font-bold prose-headings:text-tailblog-primary prose-p:text-tailblog-secondary lg:prose-h1:text-6xl
+    prose lg:prose-xl max-w-none prose-headings:font-bold prose-headings:text-tailblog-primary prose-p:text-tailblog-secondary lg:prose-h1:text-6xl
     prose-img:mt-0 prose-img:mb-0
 ">
-    <picture class="relative w-[150px] lg:w-[220px] flex-none overflow-hidden rounded-full">
-        <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=600&q=80" alt="">
-    </picture>
+    <Image src={logoImage} width={200} alt="" loading="eager" decoding="sync" class="relative w-[150px] lg:w-[220px] flex-none overflow-hidden rounded-full"  />
     <p>
         Lorem ipsum dolor sit amet consectetur adipiscing elit
     </p>
@@ -15,18 +24,18 @@
 
 <section class="my-10 flex justify-center gap-5 overflow-hidden py-4 sm:gap-10">
     <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-[10px] bg-white dark:bg-tailblog-dark sm:w-3/12 sm:rounded-[10px] rotate-2">
-        <img src="https://images.unsplash.com/photo-1686881537217-5bf3b5998cf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+        <Image src={slide1} width={500} alt="" />
     </div>
     <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-[10px] bg-white dark:bg-tailblog-dark sm:w-3/12 sm:rounded-[10px] -rotate-2">
-        <img src="https://images.unsplash.com/photo-1687166851109-09a7b6ec7932?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+        <Image src={slide2} width={500} alt="" />
     </div>
     <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-[10px] bg-white dark:bg-tailblog-dark sm:w-3/12 sm:rounded-[10px] rotate-2">
-        <img src="https://plus.unsplash.com/premium_photo-1684175656230-e839ec175c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+        <Image src={slide3} width={500} alt="" />
     </div>
     <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-[10px] bg-white dark:bg-tailblog-dark sm:w-3/12 sm:rounded-[10px] rotate-2">
-        <img src="https://plus.unsplash.com/premium_photo-1686975618041-8f4971436c47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+        <Image src={slide4} width={500} alt="" />
     </div>
     <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-[10px] bg-white dark:bg-tailblog-dark sm:w-3/12 sm:rounded-[10px] -rotate-2">
-        <img src="https://images.unsplash.com/photo-1610880846497-7257b23f6138?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+        <Image src={slide5} width={500} alt="" />
     </div>
 </section>

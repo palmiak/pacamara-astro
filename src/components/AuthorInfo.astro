@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 const { authorData } = Astro.props;
 ---
 
@@ -6,4 +7,5 @@ const { authorData } = Astro.props;
 
 <p>{authorData.data.bio}</p>
 
-<img src={authorData.data.photo} />
+{authorData.data.photo && <Image src={authorData.data.photo} width="150" alt="Author's photo" /> }
+
