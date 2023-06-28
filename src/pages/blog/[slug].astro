@@ -39,23 +39,13 @@ const author = await getEntry(entry.data.author);
       
           <PublishDate date={entry.data.pubDate} />
       </p>
-      <picture class="relative -rotate-2 overflow-hidden">
-        <source srcset="https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=650&h=500&q=80"       
-          media="(max-width: 640px)">
+      {entry.data.image && <Image src={entry.data.image} width="1600" alt="" loading="eager" decoding="sync" class="relative -rotate-2 overflow-hidden" loading="eager" /> }
 
-        <source srcset="https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1040&h=800&q=80"       
-          media="(min-width: 639px) and (max-width: 1023px)">
-
-        <source srcset="https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&h=700&q=80"       
-          media="(min-width: 1024px) and (max-width: 1279px)">
-
-        <img src="https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&h=700&q=80" alt="">
-      </picture>
       
     </div>
     <article
       class="mx-auto max-w-screen-lg px-7 lg:px-0 py-10 lg:mb-[100px] mb-10
-      prose lg:prose-xl max-w-none
+      prose lg:prose-xl
       prose-headings:transition-all prose-headings:duration-300 prose-headings:font-tailblog-space prose-headings:font-bold prose-headings:text-tailblog-accent prose-headings:mb-0 prose-headings:pb-3 prose-headings:mt-6
       prose-p:transition-all prose-p:duration-300 prose-p:text-tailblog-primary/80 lg:prose-p:text-[18px] 
       prose-li:transition-all prose-li:duration-300 prose-li:text-tailblog-primary/80 lg:prose-li:text-[18px]
@@ -63,7 +53,7 @@ const author = await getEntry(entry.data.author);
       prose-a:underline prose-a:font-semibold prose-a:transition-all prose-a:duration-300 prose-a:text-tailblog-accent hover:prose-a:text-tailblog-dark
       prose-strong:transition-all prose-strong:duration-300 prose-strong:font-bold
       prose-hr:transition-all prose-hr:duration-300 prose-hr:border-tailblog-secondary/40
-      prose-img:rounded-lg
+      prose-img:rounded-lg prose-img:mx-auto 
       prose-code:transition-all prose-code:duration-300 prose-code:text-tailblog-dark prose-code:text-[18px]
       dark:prose-headings:text-tailblog-accent dark:prose-p:text-white/70 dark:prose-a:text-white dark:hover:prose-a:text-tailblog-accent dark:prose-strong:text-white dark:prose-li:text-white dark:prose-code:text-white dark:prose-td:text-white/70 dark:prose-hr:border-tailblog-accent/30 dark:prose-tr:border-tailblog-accent/30 dark:prose-thead:border-tailblog-accent/30
       ">

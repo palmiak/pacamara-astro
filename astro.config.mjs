@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import alpine from '@astrojs/alpinejs';
 import tailwind from "@astrojs/tailwind";
-import image from "@astrojs/image";
 
 import mdx from "@astrojs/mdx";
 
@@ -10,5 +9,5 @@ export default defineConfig({
   experimental: {
     assets: true
   },
-  integrations: [tailwind(), alpine(), image(), mdx()]
+  integrations: [tailwind(), alpine(), mdx()]
 });
