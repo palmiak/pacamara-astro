@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets'
 const { authorData } = Astro.props;
 ---
-<section class="mx-auto max-w-screen-lg px-7 lg:px-0 pt-10 mb-5 flex flex-col lg:flex-row flex-nowrap gap-10 items-center">
+<section class="mx-auto max-w-screen-lg px-7 lg:px-0 py-10 mb-5 flex flex-col lg:flex-row flex-nowrap gap-10 items-center">
     {authorData.data.photo && <Image src={authorData.data.photo} width="200" class="relative w-[150px] lg:w-[220px] rounded-full" alt="Author's photo" /> }
 
     <div class="
@@ -18,4 +18,4 @@ const { authorData } = Astro.props;
         <p>{authorData.data.bio}</p>
     </div>
 </section>
-<div class="w-full h-[3px] mt-10 overflow-hidden gradient-line"></div>
+<div class="w-full h-[3px] overflow-hidden gradient-line"></div>
