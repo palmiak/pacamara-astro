@@ -33,6 +33,4 @@
 
 .gradient-underline span {
     vertical-align: -0.38em;
-
-    @apply transition-all duration-300
 }

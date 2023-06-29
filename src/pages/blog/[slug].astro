@@ -65,7 +65,9 @@ const author = await getEntry(entry.data.author);
 
     <AuthorInfo authorData={author} />
 
-    <h2>Read more</h2>
-    <LatestPosts postLimit=2 skipPost={entry.data.title} />
+    <div class="pt-10 mb-7 bg-tailblog-dark/[0.05] dark:bg-white/[0.05]">
+      <h2 class="container mx-auto max-w-screen-lg px-7">Read more</h2>
+      <LatestPosts postLimit=2 skipPost={entry.data.title} />
+    </div>
   </section>
 </Base>
