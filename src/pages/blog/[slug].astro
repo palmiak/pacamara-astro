@@ -25,29 +25,25 @@ const author = await getEntry(entry.data.author);
 ---
 
 <Base postData={entry}>
-  <section class="">
-    <div class="container mx-auto max-w-screen-xl px-7 pt-10 mb-7
-      prose lg:prose-xl prose-headings:font-bold prose-headings:text-tailblog-dark prose-headings:mb-3 prose-img:m-0 prose-img:rounded-[10px]
+  <article class="px-7 pt-10 mx-auto w-full">
+    <div class="mx-auto
+      prose lg:prose-xl prose-headings:font-bold prose-headings:text-tailblog-dark prose-headings:mb-3
       ">
-      <h1 class="mx-auto max-w-screen-lg transition-all duration-300 dark:text-white">{entry.data.title}</h1>
-      <p class="flex flex-row flex-wrap gap-5 items-center font-tailblog-space mx-auto max-w-screen-lg mb-7">
-          { entry.data.tag &&
-          <span class="group text-[16px] relative inline-block bg-tailblog-accent/60 rounded-tl-[10px] rounded-br-[10px] px-3 text-white">
-              {entry.data.tag}
-          </span>
-          }
-      
-          <PublishDate date={entry.data.pubDate} />
-      </p>
-      {entry.data.image && 
-        <div class="">
-          <Image src={entry.data.image} width="1600" alt="" loading="eager" decoding="sync" class="relative -rotate-2 overflow-hidden z-50" loading="eager" />
-        </div>
-      }
+        <h1 class="transition-all duration-300 dark:text-white">{entry.data.title}</h1>
+        <p class="flex flex-row flex-wrap gap-5 items-center font-tailblog-space mx-auto max-w-screen-lg mb-7">
+            { entry.data.tag &&
+            <span class="group text-[16px] relative inline-block bg-tailblog-accent/60 rounded-tl-[10px] rounded-br-[10px] px-3 text-white">
+                {entry.data.tag}
+            </span>
+            }
+            <PublishDate date={entry.data.pubDate} />
+        </p>
     </div>
-    <article
-      class="
-        mx-auto max-w-screen-lg px-7 lg:px-0 pt-10 mb-5
+    {entry.data.image && 
+      <Image src={entry.data.image} width="1800" alt="" loading="eager" decoding="sync" class="block relative rounded-[10px] mx-auto mt-10" loading="eager" />
+    }
+    <div class="
+        lg:px-0 pt-10 mb-5 mx-auto
         prose lg:prose-xl
         prose-headings:transition-all prose-headings:duration-300 prose-headings:font-tailblog-space prose-headings:font-bold prose-headings:text-tailblog-accent prose-headings:mb-0 prose-headings:pb-3 prose-headings:mt-6
         prose-p:transition-all prose-p:duration-300 prose-p:text-tailblog-primary/80 lg:prose-p:text-[18px] 
@@ -61,13 +57,13 @@ const author = await getEntry(entry.data.author);
         dark:prose-headings:text-tailblog-accent dark:prose-p:text-white/70 dark:prose-a:text-white dark:hover:prose-a:text-tailblog-accent dark:prose-strong:text-white dark:prose-li:text-white dark:prose-code:text-white dark:prose-td:text-white/70 dark:prose-hr:border-tailblog-accent/30 dark:prose-tr:border-tailblog-accent/30 dark:prose-thead:border-tailblog-accent/30
       ">
       <Content />
-    </article>
+  </div>
+</article>
 
-    <AuthorInfo authorData={author} />
+<AuthorInfo authorData={author} />
 
-    <div class="pt-10 mb-7 bg-tailblog-dark/[0.05] dark:bg-white/[0.05]">
-      <h2 class="container mx-auto max-w-screen-lg px-7">Read more</h2>
-      <LatestPosts postLimit=2 skipPost={entry.data.title} />
-    </div>
-  </section>
+<div class="pt-10 mb-7 bg-gradient-to-b from-tailblog-dark/[0.05] to-tailblog-dark[0 dark:bg-gradient-to-b dark:from-bg-black/50 to-bg-black/0">
+  <h2 class="container mx-auto max-w-screen-lg px-7 text-xl text-tailblog-secondary font-bold mb-7">See other articles:</h2>
+  <LatestPosts postLimit=2 skipPost={entry.data.title} />
+</div>
 </Base>
