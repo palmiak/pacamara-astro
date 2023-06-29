@@ -2,10 +2,20 @@
 import { Image } from 'astro:assets'
 const { authorData } = Astro.props;
 ---
+<section class="mx-auto max-w-screen-lg px-7 lg:px-0 pt-10 mb-5 flex flex-col lg:flex-row flex-nowrap gap-10 items-center">
+    {authorData.data.photo && <Image src={authorData.data.photo} width="200" class="relative w-[150px] lg:w-[220px] rounded-full" alt="Author's photo" /> }
 
-<div>{authorData.data.displayName}</div>
-
-<p>{authorData.data.bio}</p>
-
-{authorData.data.photo && <Image src={authorData.data.photo} width="150" alt="Author's photo" /> }
-
+    <div class="
+            prose lg:prose-xl max-w-none 
+            prose-headings:font-bold prose-headings:text-tailblog-accent 
+            prose-p:text-tailblog-primary/70 lg:prose-p:text-[18px] prose-p:transition-all prose-p:duration-300 
+            prose-a:font-semibold prose-a:text-tailblog-dark prose-a:hover:text-tailblog-pink prose-a:no-underline prose-a:transition-all prose-a:duration-300
+            prose-strong:font-normal 
+            prose-headings:font-tailblog-space prose-h2:mb-7
+            dark:prose-a:text-white dark:prose-a:hover:text-tailblog-accent dark:prose-p:text-white/70
+        ">
+        <h3>{authorData.data.displayName}</h3>
+        <p>{authorData.data.bio}</p>
+    </div>
+</section>
+<div class="w-full h-[1px] mt-10 overflow-hidden gradient-line"></div>
