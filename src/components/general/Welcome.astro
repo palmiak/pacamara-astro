@@ -10,17 +10,19 @@ import slide4 from '../../assets/slide-4.jpg';
 import slide5 from '../../assets/slide-5.jpg';
 ---
 <section class="
-    container mx-auto max-w-screen-xl px-7 py-10
-    lg:min-h-[500px] grid grid-cols-1 content-center font-tailblog
-    prose lg:prose-xl max-w-none lg:prose-xl prose-headings:font-bold prose-heading:transition-all prose-heading:duration-300 prose-headings:text-tailblog-primary prose-p:text-tailblog-secondary lg:prose-h1:text-6xl prose-p:transition-all prose-p:duration-300
-    prose-img:mt-0 prose-img:mb-0  
-    dark:prose-headings:text-white dark:prose-p:text-white/50
-">
+        container mx-auto max-w-screen-xl px-7 py-10
+        lg:min-h-[500px] content-center font-tailblog
+        prose lg:prose-xl
+        prose-headings:font-tailblog-space prose-headings:mt-6 prose-headings:text-tailblog-dark prose-headings:font-bold lg:prose-h1:text-7xl prose-h1:mt-0 prose-heading:transition-all prose-heading:duration-300  
+        prose-p:text-tailblog-primary/50 dark:prose-p:text-white/70 prose-p:mb-0 prose-p:transition-all prose-p:duration-300
+        prose-img:mt-0 prose-img:mb-0  
+        dark:prose-headings:text-white
+    ">
     <Image src={logoImage} width={200} alt="" loading="eager" decoding="sync" class="relative w-[150px] lg:w-[220px] flex-none overflow-hidden rounded-full"  />
-    <p>
+    <p class="">
         Lorem ipsum dolor sit amet consectetur adipiscing elit
     </p>
-    <h1 class="font-tailblog-space">I see a bad-ass mother who don't take no crap off of nobody.</h1>
+    <h1><span class="gradient-underline"><span>I see a bad-ass mother who don't take no crap off of nobody.</span></span></h1>
 </section>
 
 <section class="my-10 flex justify-center gap-5 overflow-hidden py-4 sm:gap-10">

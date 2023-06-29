@@ -1,0 +1,38 @@
+:root {
+    --gradient-space: 20px;
+    --gradient-height: 2px;
+  }
+
+.gradient-line {
+    background-image:   linear-gradient(90deg,transparent,transparent 50%,theme('colors.tailblog-white') 50%,theme('colors.tailblog-white') 100%),
+                        linear-gradient(90deg,theme('colors.tailblog-secondary'),theme('colors.tailblog-accent'));
+    background-size:    var(--gradient-space) var(--gradient-height),100% var(--gradient-height);
+
+    @apply transition-all duration-300 rounded-full;
+}
+
+.dark .gradient-line {
+    background-image:   linear-gradient(90deg,transparent,transparent 50%,theme('colors.tailblog-dark') 50%,theme('colors.tailblog-dark') 100%),
+                        linear-gradient(90deg,theme('colors.tailblog-secondary'),theme('colors.tailblog-accent'));
+    background-size:    var(--gradient-space) var(--gradient-height),100% var(--gradient-height);
+
+    @apply transition-all duration-300 rounded-full;
+}
+
+.gradient-underline {
+    line-height: 0.6em;
+    vertical-align: 0em;
+    border-bottom: .27em solid transparent;
+    -moz-border-image: -moz-linear-gradient(left, theme('colors.tailblog-secondary') 0%, theme('colors.tailblog-accent') 100%);
+    -webkit-border-image: -webkit-linear-gradient(left, theme('colors.tailblog-secondary') 0%, theme('colors.tailblog-accent') 100%);
+    border-image: linear-gradient(to right, theme('colors.tailblog-secondary') 0%, theme('colors.tailblog-accent') 100%);
+    border-image-slice: 1;
+
+    @apply transition-all duration-300
+}
+
+.gradient-underline span {
+    vertical-align: -0.38em;
+
+    @apply transition-all duration-300
+}
