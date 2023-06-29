@@ -3,6 +3,45 @@
     --gradient-height: 2px;
   }
 
+@font-face {
+    font-display: swap; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/inter-v12-latin_latin-ext-regular.woff2') format('woff2'); 
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/inter-v12-latin_latin-ext-700.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap; 
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/space-grotesk-v15-latin_latin-ext-regular.woff2') format('woff2'); 
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/space-grotesk-v15-latin_latin-ext-600.woff2') format('woff2'); 
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/space-grotesk-v15-latin_latin-ext-700.woff2') format('woff2'); 
+}
+
 .gradient-line {
     background-image:   linear-gradient(90deg,transparent,transparent 50%,theme('colors.tailblog-white') 50%,theme('colors.tailblog-white') 100%),
                         linear-gradient(90deg,theme('colors.tailblog-secondary'),theme('colors.tailblog-accent'));

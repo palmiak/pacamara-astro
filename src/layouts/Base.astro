@@ -10,17 +10,24 @@ const { postData } = Astro.props;
 ---
 <!doctype html>
 <html 
-    x-data :class="($store.darkMode.on == 'true') ? 'dark' : ''"
+    lang="en"   
 >
 
 <head>
+    <script is:inline>
+        if (localStorage.darkMode === 'true' || (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+            localStorage.darkMode = 'true';
+        } else {
+            document.documentElement.classList.remove('dark')
+            localStorage.darkMode = 'false';
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="./rss.xml" />
     <SeoHead postData={postData} />
+    </script>
 </head>
 
 <body class="font-tailblog-inter transition-all duration-300 bg-white dark:bg-tailblog-dark">
@@ -29,16 +36,4 @@ const { postData } = Astro.props;
 
     <Footer />
 </body>
-<script>
-    document.addEventListener('alpine:init', () => {
-        Alpine.store('darkMode', {
-            on: ( ( localStorage.darkMode === "true" ) || ( localStorage.darkMode === undefined && window.matchMedia('(prefers-color-scheme: dark)').matches ) ) ? 'true' : '',
-
-            toggle() {
-                this.on = (this.on == "true") ? "false" : "true";
-                localStorage.darkMode = this.on;
-            }
-        })
-    })
-</script>
 </html>

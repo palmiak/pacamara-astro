@@ -1,5 +1,5 @@
 <div class="relative inline-flex items-center gap-2 mr-2 sm:pb-2">
-  <button x-data @click="$store.darkMode.toggle()" class="group">
+  <button id="mode_switcher" class="group" title="Switch mode">
     <svg
       height="512"
       viewBox="0 0 24 24"
@@ -24,3 +24,16 @@
     >
   </button>
 </div>
+
+<script>
+  const button = document.querySelector("#mode_switcher");
+  button.addEventListener('click', function(){
+    document.documentElement.classList.toggle('dark');
+
+    if ( document.documentElement.classList.contains('dark') ) {
+      localStorage.darkMode = 'true'
+    } else {
+      localStorage.darkMode = 'false'
+    }
+  });
+</script>
