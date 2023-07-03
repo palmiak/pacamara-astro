@@ -8,18 +8,18 @@ module.exports = {
 		},
 		extend: {
 			boxShadow: {
-				'tailblog-shadow': '0px 25px 50px -12px rgba(0, 0, 0, 0.3)',
+				'pacamara-shadow': '0px 25px 50px -12px rgba(0, 0, 0, 0.3)',
 			},
 			fontFamily: {
-				'tailblog-inter': ['"Inter"', 'sans-serif'],
-				'tailblog-space': ['"Space Grotesk"', 'sans-serif'],
+				'pacamara-inter': ['"Inter"', 'sans-serif'],
+				'pacamara-space': ['"Space Grotesk"', 'sans-serif'],
 			},
 			colors: {
-				'tailblog-primary': '#003049',
-				'tailblog-secondary': '#B2A4FF',
-				'tailblog-accent': '#FFB4B4',
-				'tailblog-dark': '#000E14',
-				'tailblog-white': '#ffffff',
+				'pacamara-primary': '#003049',
+				'pacamara-secondary': '#B2A4FF',
+				'pacamara-accent': '#FFB4B4',
+				'pacamara-dark': '#000E14',
+				'pacamara-white': '#ffffff',
 			},
 		},
 	},
