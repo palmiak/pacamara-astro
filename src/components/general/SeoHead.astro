@@ -5,7 +5,7 @@ const { postData } = Astro.props;
 
 const title = ( postData?.data?.title ? postData.data.title : config.title ) + config.titleSuffix;
 const description = postData?.data?.description ? postData.data.description : config.description;
-const permalink = false;
+const permalink = new URL(Astro.url.pathname, Astro.site);
 const image = postData?.data?.image ? postData.data.image : config.defaultOgImage
 const type = postData?.data?.type ? postData.data.type : "website"
 ---
@@ -19,7 +19,7 @@ const type = postData?.data?.type ? postData.data.type : "website"
 <meta property="og:title" content={title} />
 {permalink && <meta property="og:url" content={permalink} />}
 {description && <meta property="og:description" content={description} />}
-{image && <meta property="og:image" content={image} />}
+{image && <meta property="og:image" content={new URL(image, Astro.url)} />}
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
