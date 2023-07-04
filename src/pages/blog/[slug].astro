@@ -37,7 +37,7 @@ const author = await getEntry(entry.data.author);
         </p>
     </div>
     {entry.data.image && 
-      <Image src={entry.data.image} width="1200" height="200" alt="" loading="eager" decoding="sync" class="block relative mx-auto mt-10" loading="eager" />
+      <Image src={entry.data.image} width="1200" height="200" alt="" loading="eager" decoding="sync" class="block relative mx-auto mt-10 object-cover h-72 md:h-96" loading="eager" />
     }
     <div class="
         lg:px-0 pt-10 mb-5 mx-auto
