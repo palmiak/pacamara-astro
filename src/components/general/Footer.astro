@@ -1,2 +1,39 @@
-<footer>
-</footer>
+---
+import Facebook from "../icons/facebook.astro";
+import Twitter from "../icons/twitter.astro";
+import Dribbble from "../icons/dribbble.astro";
+import Github from "../icons/github.astro";
+import Instagram from "../icons/instagram.astro";
+import Mastodon from "../icons/mastodon.astro";
+import Messenger from "../icons/messenger.astro";
+import Pinterest from "../icons/pinterest.astro";
+import Skype from "../icons/skype.astro";
+---
+<div class="w-full h-[1px] overflow-hidden gradient-line"></div>
+<div class="py-14 transition-all duration-300 bg-gradient-to-r from-pacamara-secondary/10 to-pacamara-accent/10 dark:bg-gradient-to-r dark:from-pacamara-accent/[2%] dark:to-pacamara-secondary/[5%]">
+    <footer class="container mx-auto max-w-screen-xl flex flex-initial lg:flex-row flex-col gap-10 items-center px-7">
+        <div class="logo flex-none">
+            <a href="/" class="font-bold font-pacamara-space text-lg hover:text-pacamara-accent transition-all duration-300 dark:text-white dark:hover:text-pacamara-accent">Pacamara</a>
+        </div>
+
+        <ul class="list-none text-[14px] font-normal flex flex-initial flex-row content-center items-center gap-x-[35px]">
+            <li>
+                <a href="" target="_blank"><Facebook /></a>
+            </li>
+            <li>
+                <a href="" target="_blank"><Dribbble /></a>
+            </li>
+            <li>
+                <a href="" target="_blank"><Instagram /></a>
+            </li>
+            <li>
+                <a href="" target="_blank"><Twitter /></a>
+            </li>
+        </ul>
+        <div class="grow lg:text-right">
+            <span class="text-[14px] text-pacamara-dark/40 transition-all duration-300 dark:text-pacamara-white/40">
+                made with <span class="text-pacamara-accent">&hearts;</span> by <a href="https://maciekpalmowski.dev/" target="_blank" class="transition-all duration-300 text-pacamara-dark/60 hover:text-pacamara-accent">Maciek Palmowski</a>
+            </span>
+        </div>
+    </footer>
+</div>
