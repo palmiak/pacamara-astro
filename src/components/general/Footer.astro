@@ -1,13 +1,6 @@
 ---
-import Facebook from "../icons/facebook.astro";
-import Twitter from "../icons/twitter.astro";
-import Dribbble from "../icons/dribbble.astro";
-import Github from "../icons/github.astro";
-import Instagram from "../icons/instagram.astro";
-import Mastodon from "../icons/mastodon.astro";
-import Messenger from "../icons/messenger.astro";
-import Pinterest from "../icons/pinterest.astro";
-import Skype from "../icons/skype.astro";
+import config from '../../config.mjs';
+import SocialIcon from './SocialIcon.astro';
 ---
 <div class="w-full h-[1px] overflow-hidden gradient-line"></div>
 <div class="py-14 transition-all duration-300 bg-gradient-to-r from-pacamara-secondary/10 to-pacamara-accent/10 dark:bg-gradient-to-r dark:from-pacamara-accent/[2%] dark:to-pacamara-secondary/[5%]">
@@ -17,18 +10,21 @@ import Skype from "../icons/skype.astro";
         </div>
 
         <ul class="list-none text-[14px] font-normal flex flex-initial flex-row content-center items-center gap-x-[35px]">
-            <li>
-                <a href="" target="_blank"><Facebook /></a>
-            </li>
-            <li>
-                <a href="" target="_blank"><Dribbble /></a>
-            </li>
-            <li>
-                <a href="" target="_blank"><Instagram /></a>
-            </li>
-            <li>
-                <a href="" target="_blank"><Twitter /></a>
-            </li>
+            <SocialIcon socialUrl={config?.social?.dribbble} socialType="dribbble" />
+
+            <SocialIcon socialUrl={config?.social?.facebook} socialType="facebook" />
+
+            <SocialIcon socialUrl={config?.social?.github} socialType="github" />
+
+            <SocialIcon socialUrl={config?.social?.instagram} socialType="instagram" />
+
+            <SocialIcon socialUrl={config?.social?.mastodon} socialType="mastodon" />
+
+            <SocialIcon socialUrl={config?.social?.pinterest} socialType="pinterest" />
+
+            <SocialIcon socialUrl={config?.social?.skype} socialType="skype" />
+
+            <SocialIcon socialUrl={config?.social?.twitter} socialType="twitter" />
         </ul>
         <div class="grow lg:text-right">
             <span class="text-[14px] text-pacamara-dark/40 transition-all duration-300 dark:text-pacamara-white/40">

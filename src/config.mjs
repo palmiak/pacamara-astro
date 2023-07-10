@@ -6,4 +6,15 @@ export default {
     latestPosts: 3,
     postsPerPage: 3,
     url: "https://domain.com",
+    social: {
+        'dribbble': false,
+        'facebook': false,
+        'github': 'https://github.com/palmiak',
+        'instagram': false,
+        'mastodon': false,
+        'pinterest': false,
+        'skype': false,
+        'twitter': 'https://twitter.com/palmiak_fp'
+
+    }
 }
