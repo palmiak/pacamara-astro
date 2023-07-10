@@ -25,9 +25,11 @@ const { page } = Astro.props;
                 return <Post postData={post} />;
             })
         }
-
-        {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
-        {page.url.next ? <a href={page.url.next}>Next</a> : null}
+        <div class="flex flex-row justify-center gap-7">
+            {page.url.prev ? <a href={page.url.prev} class="text-[16px] bg-transparent border-pacamara-secondary border-[1px] leading-none rounded-full py-3 px-5 text-pacamara-secondary hover:bg-pacamara-accent hover:border-pacamara-accent hover:text-pacamara-white transition-all duration-300">Previous</a> : null}
+            {page.url.next ? <a href={page.url.next} class="text-[16px] bg-transparent border-pacamara-secondary border-[1px] leading-none rounded-full py-3 px-5 text-pacamara-secondary hover:bg-pacamara-accent hover:border-pacamara-accent hover:text-pacamara-white transition-all duration-300">Next</a> : null}
+        </div>
+        
     </section>
 
     
