@@ -6,28 +6,38 @@ import Tag from "../general/Tag.astro";
 <article
     class="
         group
-        lg:mb-[80px] mb-10 last:mb-0 prose lg:prose-xl max-w-none 
+        lg:mb-[50px] mb-10 last:mb-0 prose lg:prose-xl max-w-none 
         prose-headings:font-bold prose-headings:text-pacamara-accent 
         prose-p:text-pacamara-primary/70 lg:prose-p:text-[18px] prose-p:transition-all prose-p:duration-300 
         prose-a:font-semibold prose-a:text-pacamara-dark prose-a:hover:text-pacamara-pink prose-a:no-underline prose-a:transition-all prose-a:duration-300
         prose-strong:font-normal 
-        prose-headings:font-pacamara-space prose-h2:mb-7
+        prose-headings:font-pacamara-space prose-h2:mb-7 prose-h2:mt-0
+        prose-img:mt-0 prose-img:mb-0
         dark:prose-a:text-white dark:prose-a:hover:text-pacamara-accent dark:prose-p:text-white/70
     ">
-    <h2>
-        <a href={ '/blog/' + postData.slug } class="text-pacamara-dark hover:text-pacamara-accent">
-            { postData.data.title }
-        </a>
-    </h2>
+    <div class="grid grid-cols-1 lg:grid-cols-[200px_auto] md:grid-cols-[200px_auto] gap-10 items-center">
+        <div class="post_image">
+            <a href="">
+                <img src="https://images.unsplash.com/photo-1518057111178-44a106bad636?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=370&q=80" alt="" class="rounded-[15px] image-shine rotate-2">
+            </a>
+        </div>
+        <div class="post_intro">
+            <h2>
+                <a href={ '/blog/' + postData.slug } class="text-pacamara-dark hover:text-pacamara-accent">
+                    { postData.data.title }
+                </a>
+            </h2>
+        
+            <p>
+                { postData.data.intro }
+            </p>
+        
+            <p class="flex flex-row flex-wrap gap-5 items-center mt-5 group-last:mb-0">
+                <Tag tag={postData.data.tag} />
+                <PublishDate date={postData.data.pubDate} />
+            </p>
+        </div>
+    </div>
 
-    <p>
-        { postData.data.intro }
-    </p>
-
-    <p class="flex flex-row flex-wrap gap-5 items-center mt-5 group-last:mb-0">
-        <Tag tag={postData.data.tag} />
-        <PublishDate date={postData.data.pubDate} />
-    </p>
-
-    <div class="w-full h-[1px] mt-10 lg:mt-[80px] overflow-hidden gradient-line group-last:hidden"></div>
+    <div class="w-full h-[1px] mt-10 lg:mt-[50px] overflow-hidden gradient-line group-last:hidden"></div>
 </article>
