@@ -13,8 +13,8 @@ const posts = (await getCollection('blog', ({ data }) => {
 ---
 <section class="container mx-auto max-w-screen-lg px-7 py-10 mb-10">
     {
-        posts.map((post) => {
-            return <Post postData={post} />;
+        posts.map((post, index) => {
+          return <Post postData={post} num={index} />;
         })
     }
 </section>

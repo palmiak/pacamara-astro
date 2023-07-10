@@ -21,8 +21,8 @@ const { page } = Astro.props;
 <Base>
     <section class="container mx-auto max-w-screen-lg px-7 py-10">
         {
-            page.data.map((post) => {
-                return <Post postData={post} />;
+            page.data.map((post, index) => {
+                return <Post postData={post} num={index} />;
             })
         }
         <div class="flex flex-row justify-center gap-7">
