@@ -21,6 +21,9 @@ module.exports = {
 				'pacamara-dark': '#000E14',
 				'pacamara-white': '#ffffff',
 			},
+			aspectRatio: {
+				'9/10': '9 / 16',
+			},
 		},
 	},
 	plugins: [
