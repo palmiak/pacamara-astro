@@ -1,5 +1,7 @@
 ---
 import ModeSwitch from "./ModeSwitch.astro";
+import HamburgerButton from "./hamburgerButton.astro";
+import Navigation from "./Navigation.astro"
 
 ---
 
@@ -8,19 +10,16 @@ import ModeSwitch from "./ModeSwitch.astro";
         <a href="/" class="font-bold font-pacamara-space text-lg hover:text-pacamara-accent transition-all duration-300 dark:text-white dark:hover:text-pacamara-accent">Pacamara</a>
     </div>
     <div class="navigation flex-1 hidden md:block">
-        <nav>
-            <ul class="list-none text-[14px] font-normal flex flex-initial flex-row gap-5">
-                <li>
-                    <a href="/" class="opacity-60 text-pacamara-primary hover:opacity-100 hover:text-pacamara-accent transition-all duration-300 dark:text-white dark:hover:text-pacamara-accent">Home</a>
-                </li>
-                <li>
-                    <a href="/blog" class="opacity-60 text-pacamara-primary hover:opacity-100 hover:text-pacamara-accent transition-all duration-300 dark:text-white dark:hover:text-pacamara-accent">Blog</a>
-                </li>
-                <li>
-                    <a href="/" class="opacity-60 text-pacamara-primary hover:opacity-100 hover:text-pacamara-accent transition-all duration-300 dark:text-white dark:hover:text-pacamara-accent">Contact</a>
-                </li>
-            </ul>
-        </nav>
+        <Navigation />
     </div>
-    <ModeSwitch />
+
+    <div class="navigation flex-1 hidden" id="navigation_wrapper">
+        <Navigation />
+    </div>
+    
+    <div class="relative flex flex-initial flex-row items-center">
+        <ModeSwitch />
+        <HamburgerButton />
+    </div>
+    
 </header>

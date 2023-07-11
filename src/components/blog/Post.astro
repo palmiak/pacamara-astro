@@ -23,7 +23,7 @@ const isOdd = num % 2;
     <div class="grid grid-cols-1 lg:grid-cols-[200px_auto] md:grid-cols-[200px_auto] gap-10 items-center">
         <div class="post_image">
             <a href={ '/blog/' + postData.slug }>
-                <Image src={postData?.data?.image ? postData.data.image : defaultImage} width="400" alt={ postData.title + "Thumbnail"} class:list={[ 'rounded-[15px] image-shine object-cover h-[200px]', { "rotate-2": isOdd, "-rotate-2": !isOdd } ]}  />
+                <Image src={postData?.data?.image ? postData.data.image : defaultImage} width="750" alt={ postData.title + "Thumbnail"} class:list={[ 'rounded-[15px] image-shine object-cover h-[200px]', { "rotate-2": isOdd, "-rotate-2": !isOdd } ]}  />
             </a>
         </div>
         <div class="post_intro">

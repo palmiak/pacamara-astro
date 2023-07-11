@@ -7,9 +7,7 @@ import '../css/style.css';
 const { postData } = Astro.props;
 ---
 <!doctype html>
-<html 
-    lang="en"   
->
+<html lang="en">
 
 <head>
     <script is:inline>
@@ -26,6 +24,12 @@ const { postData } = Astro.props;
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="./rss.xml" />
     <SeoHead postData={postData} />
     </script>
+    <link rel="preload" href="/fonts/inter-v12-latin_latin-ext-regular.woff2" as="font" crossorigin>
+    <link rel="preload" href="/fonts/inter-v12-latin_latin-ext-700.woff2" as="font" crossorigin>
+    <link rel="preload" href="/fonts/space-grotesk-v15-latin_latin-ext-regular.woff2" as="font" crossorigin>
+    <link rel="preload" href="/fonts/space-grotesk-v15-latin_latin-ext-600.woff2" as="font" crossorigin>
+    <link rel="preload" href="/fonts/space-grotesk-v15-latin_latin-ext-700.woff2" as="font" crossorigin>
+
 </head>
 
 <body class="font-pacamara-inter transition-all duration-300 bg-white dark:bg-pacamara-dark">
