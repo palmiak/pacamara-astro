@@ -31,3 +31,6 @@ If you are looking for a great place to host your blog, try [**Kinsta**](https:/
 
 ## Thank you
 Without my [wife](https://agnieszkapalmowska.myportfolio.com/), this project wouldn't like half as beautiful as it looks. Also, if you are looking for an amazing designer - click the link above.
+
+## Did you enjoy this theme?
+If you don't want to miss any of the content I create, join my [weekly newsletter](https://newsletter.maciekpalmowski.dev/).
