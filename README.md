@@ -3,11 +3,13 @@
 
 You can see it live in action [**here**](https://tailblog-astro-ndyp5.kinsta.page/).
 
+![Pacamara demo screen](https://github.com/palmiak/pacamara-astro/assets/2342458/9fbe8655-ee60-4c37-8bf3-eae0cca57d91)
+
 ## Features
 - Dark & Light mode support
 - SEO-friendly 
 - Type-safe markdown
-- Support Astro's Assets and Colletions
+- Support Astro's Assets and Collections
 - Provides RSS feed
 
 ## Installation
@@ -20,12 +22,12 @@ npm start
 ```
 
 ## Usage
-- **Pacamara** utilizes Astro Collections for blog posts, pages and authors. You can find all of them in `src/content` folder
+- **Pacamara** utilizes Astro Collections for blog posts, pages, and authors. You can find all of them in `src/content` folder
 - Most of the configuration is customizable via `src/config.mjs`.
 - The theme uses **TailwindCSS** - this means you can configure the colors using `tailwind.config.cjs`.
 
 ## Kinsta Hosting
-If you are looking for a great place to host your blog, you should give [**Kinsta**](https://kinsta.com) a try.
+If you are looking for a great place to host your blog, try [**Kinsta**](https://kinsta.com).
 
 ## Thank you
-Without my [wife](https://agnieszkapalmowska.myportfolio.com/), this project wouldn't like half as beautiful as it looks. Also, if you are looking for an amazing designer - just click the link above.
+Without my [wife](https://agnieszkapalmowska.myportfolio.com/), this project wouldn't like half as beautiful as it looks. Also, if you are looking for an amazing designer - click the link above.
