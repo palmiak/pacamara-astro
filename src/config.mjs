@@ -5,7 +5,7 @@ export default {
     defaultOgImage: "./defaultog.jpg",
     latestPosts: 3,
     postsPerPage: 3,
-    url: "http://pacamara-astro-6y7xr.kinsta.page",
+    url: "https://pacamara-astro-6y7xr.kinsta.page",
     social: {
         'dribbble': false,
         'facebook': false,
