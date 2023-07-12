@@ -7,5 +7,6 @@ export default defineConfig({
   experimental: {
     assets: true
   },
-  integrations: [tailwind(), mdx()]
+  integrations: [tailwind(), mdx()],
+  site: "http://pacamara-astro-6y7xr.kinsta.page"
 });
