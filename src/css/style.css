@@ -86,8 +86,13 @@
     -webkit-mask-position: 0 0;
 }
 
+html {
+    scrollbar-color: theme('colors.pacamara-secondary') theme('colors.pacamara-accent');
+    scrollbar-width: thin;
+}
+
 body::-webkit-scrollbar {
-    width: 1em;
+    width: 14px;
 }
 
 body::-webkit-scrollbar-track {
@@ -95,6 +100,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
+    background-image: linear-gradient(180deg,theme('colors.pacamara-secondary'),theme('colors.pacamara-accent'));
+    outline: 0px solid theme('colors.pacamara-accent');
+    border-radius: 10px;
 }
