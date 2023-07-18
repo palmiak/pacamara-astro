@@ -87,8 +87,8 @@
 }
 
 html {
-    scrollbar-color: theme('colors.pacamara-secondary') theme('colors.pacamara-accent');
-    scrollbar-width: thin;
+    scrollbar-color: theme('colors.pacamara-secondary') transparent;
+    scrollbar-width: auto;
 }
 
 body::-webkit-scrollbar {
