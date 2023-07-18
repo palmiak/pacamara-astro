@@ -85,3 +85,22 @@
 .image-shine:hover {
     -webkit-mask-position: 0 0;
 }
+
+html {
+    scrollbar-color: theme('colors.pacamara-secondary') transparent;
+    scrollbar-width: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(180deg,theme('colors.pacamara-secondary'),theme('colors.pacamara-accent'));
+    outline: 0px solid theme('colors.pacamara-accent');
+    border-radius: 10px;
+}
