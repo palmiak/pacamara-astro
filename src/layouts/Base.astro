@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import SeoHead from "../components/general/SeoHead.astro"
 import Header from "../components/general/Header.astro"
 import Footer from "../components/general/Footer.astro"
@@ -11,14 +12,21 @@ const { postData } = Astro.props;
 
 <head>
     <script is:inline>
-        if (localStorage.darkMode === 'true' || (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-            localStorage.darkMode = 'true';
-        } else {
-            document.documentElement.classList.remove('dark')
-            localStorage.darkMode = 'false';
+        const setDarkMode = () => {
+            if (localStorage.darkMode === 'true' || (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark')
+                localStorage.darkMode = 'true';
+            } else {
+                document.documentElement.classList.remove('dark')
+                localStorage.darkMode = 'false';
+            }
         }
+
+        setDarkMode();
+        // Runs on view transitions navigation
+        document.addEventListener('astro:after-swap', setDarkMode);
     </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="view-transition" content="same-origin" />
@@ -29,6 +37,7 @@ const { postData } = Astro.props;
     <link rel="preload" href="/fonts/space-grotesk-v15-latin_latin-ext-regular.woff2" as="font" crossorigin>
     <link rel="preload" href="/fonts/space-grotesk-v15-latin_latin-ext-600.woff2" as="font" crossorigin>
     <link rel="preload" href="/fonts/space-grotesk-v15-latin_latin-ext-700.woff2" as="font" crossorigin>
+    <ViewTransitions />
 
 </head>
 
