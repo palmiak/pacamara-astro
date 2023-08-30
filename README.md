@@ -11,6 +11,8 @@ You can see it live in action [**here**](https://pacamara-astro-6y7xr.kinsta.pag
 - Type-safe markdown
 - Support Astro's Assets and Collections
 - Provides RSS feed
+- Astro 3.0 Compatible
+- View Transition API compatible
 
 ## Installation
 If you are reading this on GitHub, you can click on the "Use this template" button above to create a new repository on your account. Then you can do a git clone to clone it to your local system.
