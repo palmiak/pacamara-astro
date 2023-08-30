@@ -24,14 +24,20 @@
 </button>
 
 <script>
-  const button = document.querySelector("#mode_switcher");
-  button.addEventListener('click', function(){
-    document.documentElement.classList.toggle('dark');
+  const setDarkModeButton = () => {
+    const button = document.querySelector("#mode_switcher");
+    button.addEventListener('click', function(){
+      document.documentElement.classList.toggle('dark');
 
-    if ( document.documentElement.classList.contains('dark') ) {
-      localStorage.darkMode = 'true'
-    } else {
-      localStorage.darkMode = 'false'
-    }
-  });
+      if ( document.documentElement.classList.contains('dark') ) {
+        localStorage.darkMode = 'true'
+      } else {
+        localStorage.darkMode = 'false'
+      }
+    });
+  }
+
+  setDarkModeButton();
+  // Runs on view transitions navigation
+  document.addEventListener('astro:after-swap', setDarkModeButton);
 </script>
