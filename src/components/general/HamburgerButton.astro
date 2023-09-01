@@ -3,10 +3,16 @@
 </button>
 
 <script>
-    const button = document.querySelector("#menu_toggle");
-    const nav = document.querySelector("#navigation_wrapper");
-    button.addEventListener('click', function(){
-        nav.classList.toggle('hidden');
-        document.documentElement.classList.toggle('overflow-hidden');
-    });
+    const menuToggle = () => {
+        const button = document.querySelector("#menu_toggle");
+        const nav = document.querySelector("#navigation_wrapper");
+        button.addEventListener('click', function(){
+            nav.classList.toggle('hidden');
+            document.documentElement.classList.toggle('overflow-hidden');
+        });
+    }
+
+    menuToggle();
+    // Runs on view transitions navigation
+    document.addEventListener('astro:after-swap', menuToggle);
 </script>
