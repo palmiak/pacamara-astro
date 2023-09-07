@@ -88,5 +88,9 @@
       "path": "[[workspace]]/src/content/page",
       "contentTypes": ["page"]
     }
-  ]
+  ],
+  "frontMatter.custom.scripts": [{
+    "title": "Generate social image",
+    "script": "./.frontmatter/scripts/test.cjs"
+  }]
 }
