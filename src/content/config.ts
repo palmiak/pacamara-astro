@@ -8,7 +8,8 @@ const blogCollection = defineCollection({
         tag: z.string(),
         image: image().optional(),
         author: reference('author'),
-        pubDate: z.date()
+        pubDate: z.date(),
+        type: z.string().optional(),
     }),
 });
 
@@ -17,7 +18,8 @@ const pageCollection = defineCollection({
     schema: ({image}) => z.object({
         title: z.string(),
         intro: z.string(),
-        image: image().optional()
+        image: image().optional(),
+        type: z.string().optional(),
     }),
 });
 
