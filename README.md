@@ -29,7 +29,7 @@ npm start
 - The theme uses **TailwindCSS** - this means you can configure the colors using `tailwind.config.cjs`.
 
 ## Kinsta Hosting
-If you are looking for a great place to host your blog, try [**Kinsta**](https://kinsta.com).
+If you are looking for a great place to host your blog, try [**Kinsta Static Site Hosting**](https://kinsta.com/static-site-hosting).
 
 ## Thank you
 Without my [wife](https://agnieszkapalmowska.myportfolio.com/), this project wouldn't like half as beautiful as it looks. Also, if you are looking for an amazing designer - click the link above.
