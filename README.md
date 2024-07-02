@@ -23,16 +23,18 @@ npm install
 npm start
 ```
 
+or you can run:
+```
+npm create astro@latest -- --template palmiak/pacamara-astro
+```
+
 ## Usage
 - **Pacamara** utilizes Astro Collections for blog posts, pages, and authors. You can find all of them in `src/content` folder
 - Most of the configuration is customizable via `src/config.mjs`.
 - The theme uses **TailwindCSS** - this means you can configure the colors using `tailwind.config.cjs`.
 
-## Kinsta Hosting
-If you are looking for a great place to host your blog, try [**Kinsta Static Site Hosting**](https://kinsta.com/static-site-hosting).
-
 ## Thank you
-Without my [wife](https://agnieszkapalmowska.myportfolio.com/), this project wouldn't like half as beautiful as it looks. Also, if you are looking for an amazing designer - click the link above.
+Without my [wife](https://agnieszkapalmowska.myportfolio.com/), this project wouldn't be half as beautiful as it looks. Also, if you are looking for an amazing designer - click the link above.
 
 ## Did you enjoy this theme?
 If you don't want to miss any of the content I create, join my [weekly newsletter](https://newsletter.maciekpalmowski.dev/).
